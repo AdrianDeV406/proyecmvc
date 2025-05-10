@@ -1,109 +1,81 @@
-    <!-- Main content -->
-    <section class="content">
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<!-- Main content -->
+<section class="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        <div class="row mb-4 align-items-center">
           <div class="col-sm-6">
-            <h1>Productos</h1>
+            <h1 class="display-4">Reservaciones</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="inicio">Home</a></li>
-              <li class="breadcrumb-item active">Productos</li>
+              <li class="breadcrumb-item active">Reservaciones</li>
             </ol>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-<!-- Título Centrado -->
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-    <h1 style="font-size: 2.5rem; font-weight: bold; color: #333;">¡Necesito Vacaciones!</h1>
-</div>
-    <!-- ***** Reservation Us Area Starts ***** -->
-    <
- 
-              
-                    <div class="contact-form">
-                        <form id="contact" action="" method="post">
-                          <div class="row">
-                            <div class="col-lg-12">
-                                <h4>Table Reservation</h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
-                            </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                              <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <select value="number-guests" name="number-guests" id="number-guests">
-                                    <option value="number-guests">Number Of Guests</option>
-                                    <option name="1" id="1">1</option>
-                                    <option name="2" id="2">2</option>
-                                    <option name="3" id="3">3</option>
-                                    <option name="4" id="4">4</option>
-                                    <option name="5" id="5">5</option>
-                                    <option name="6" id="6">6</option>
-                                    <option name="7" id="7">7</option>
-                                    <option name="8" id="8">8</option>
-                                    <option name="9" id="9">9</option>
-                                    <option name="10" id="10">10</option>
-                                    <option name="11" id="11">11</option>
-                                    <option name="12" id="12">12</option>
-                                </select>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <div id="filterDate2">    
-                                  <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                    <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                                    <div class="input-group-addon" >
-                                      <span class="glyphicon glyphicon-th"></span>
-                                    </div>
-                                  </div>
-                                </div>   
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <select value="time" name="time" id="time">
-                                    <option value="time">Time</option>
-                                    <option name="Breakfast" id="Breakfast">Breakfast</option>
-                                    <option name="Lunch" id="Lunch">Lunch</option>
-                                    <option name="Dinner" id="Dinner">Dinner</option>
-                                </select>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Reservation Area Ends ***** -->
 
-    </section>
-    <!-- /.content -->
+    <!-- Título Centrado -->
+    <div class="text-center my-4">
+      <h2 class="fw-bold text-primary">¡Necesito Vacaciones!</h2>
+    </div>
+
+    <!-- Reservation Area -->
+    <div class="container mb-5">
+      <div class="card shadow rounded-4">
+        <div class="card-body p-5">
+          <h4 class="mb-4 text-center text-secondary">Table Reservation</h4>
+
+          <form id="contact" action="" method="post">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input name="name" type="text" id="name" class="form-control form-control-lg" placeholder="Tu Nombre*" required>
+              </div>
+              <div class="col-md-6">
+                <input name="email" type="email" id="email" class="form-control form-control-lg" placeholder="Tu Correo Electronico*" required>
+              </div>
+              <div class="col-md-6">
+                <input name="phone" type="tel" id="phone" class="form-control form-control-lg" placeholder="Numero Telefonico*" required>
+              </div>
+              <div class="col-md-6">
+                <select name="number-guests" id="number-guests" class="form-select form-select-lg" required>
+                  <option disabled selected>Numero De Invitados</option>
+                  ${[...Array(12).keys()].map(i => `<option value="${i+1}">${i+1}</option>`).join('')}
+                </select>
+              </div>
+              <div class="col-md-6">
+                <input name="date" id="date" type="text" class="form-control form-control-lg" placeholder="dd/mm/yyyy" required>
+              </div>
+              <div class="col-md-6">
+                <select name="time" id="time" class="form-select form-select-lg" required>
+                  <option disabled selected>Motivo</option>
+                  <option value="Breakfast">Vacaciones</option>
+                  <option value="Lunch">Trabajo</option>
+                  <option value="Dinner">Privado</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea name="message" rows="5" id="message" class="form-control form-control-lg" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" id="form-submit" class="btn btn-primary btn-lg rounded-pill px-5 mt-3">
+                 Hacer Una Reservacion
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Optional: If not already included -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

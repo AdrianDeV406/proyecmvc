@@ -52,7 +52,7 @@
             <a href="practica" class="nav-link">
               <i class="nav-icon fa fa-home text-info"></i>
               <p>
-                practica
+                Nosotros
               </p>
             </a>
 
@@ -60,7 +60,7 @@
             <a href="productos" class="nav-link">
               <i class="nav-icon fa fa-home text-info"></i>
               <p>
-                Productos 
+                Reservaciones
               </p>
             </a>
       <!-- /.sidebar-menu -->
